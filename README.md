@@ -103,7 +103,7 @@ const siteOptions = {
 
 To ease the use of Sanity's client we've also included some functions that specific to the React and NextJS workflow. All of this code is based on the [schemas I have created]().
 
-### ::val ()
+### ::val (value)
 
 Used to parse values that may be looked for but not present in objects returned from Sanity
 
