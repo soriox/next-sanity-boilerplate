@@ -1,15 +1,8 @@
-import {getDynamicSlugs, getDyanmicPage} from '../sanity'
+import {val, getDynamicSlugs, getDynamicPage} from '../sanity'
 
 export async function getStaticPaths() {
 
-  // const slugs = await getDynamicSlugs();
-
-  // Only these slugs will work
-  const slugs = [
-    {slug: "one"},
-    {slug: "two"},
-    {slug: "three"},
-  ]
+  const slugs = await getDynamicSlugs();
     
   return {
     paths: slugs.map((i) => ({ params: { slug: i.slug } })),
@@ -20,24 +13,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     
-  // const data = await getDyanmicData(params.slug);
-
-  const pageOptions = {
-    page_title: "Next Sanity Boilerplate",
-    description: "Dynamic page title",
-    author: "John Doe",
-    og_image: "/dynamic-og-image.jpg",
-    theme_color: "#161a19",
-  }
+  const data = await getDynamicPage(params.slug);
 
   return {
     props: { 
       slug: params.slug,
-      title: pageOptions.page_title, 
-      description: pageOptions.description, 
-      author: pageOptions.author,
-      og_image: pageOptions.ogimage,
-      theme_color: pageOptions.theme_color,
+      title: val(data.page_title), 
+      description: val(data.description), 
+      author: val(data.author),
+      og_image: val(data.ogimage),
+      theme_color: val(data.theme_color),
     }
   }
 

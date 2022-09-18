@@ -15,6 +15,10 @@ export const urlFor = (source) => {
   return builder.image(source)
 }
 
+export const val = (val) => {
+  return (val) ? val : "";
+}
+
 export const getComponent = (name) => {
   return new Promise((resolve) => {
 
@@ -27,19 +31,18 @@ export const getComponent = (name) => {
   })
 }
 
-export const getDynamicSlugs = (type) => {
+export const getDynamicSlugs = () => {
   return new Promise((resolve) => {
 
     // Tweak query if needed or add more
-    const query = '*[_type == $type && slug !=""] {slug}'
-    const params = {type: type}
+    const query = '*[ slug !="" ] {slug}'
 
-    client.fetch(query, params).then((slugs) => resolve(slugs))
+    client.fetch(query).then((slugs) => resolve(slugs))
 
   })
 }
 
-export const getDyanmicPage = (slug) => {
+export const getDynamicPage = (slug) => {
   return new Promise((resolve) => {
 
     // Tweak query if needed or add more

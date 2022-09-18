@@ -2,6 +2,8 @@
   "name": "next-sanity-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "author": "Soriox",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
