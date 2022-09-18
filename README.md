@@ -4,6 +4,8 @@ A NextJS and Sanity Client boilerplate project for React websites. Created with 
 
 This project also uses Sass by default
 
+[Check out the demo here](https://next-sanity-boilerplate.vercel.app/)
+
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
