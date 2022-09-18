@@ -53,7 +53,7 @@ Install the Sanity CLI if not already installed:
 npm install -g @sanity/cli
 ```
 
-Then switch to the 'studio' folder and initialize Sanity. This will prompt you to sign in if you are not already. 
+Then switch to the 'studio' folder and initialize Sanity. This will prompt you to sign in if you are not already. It should also detect a Sanity Studio project allow you to reconfigure it with your project's details (without erasing the boilerplate schema).
 
 ```bash
 sanity init
