@@ -15,12 +15,16 @@ First, install required dependencies for NextJS:
 
 ```bash
 npm install
+# or
+yarn install
 ```
 
 Navigate to the 'studio' folder and do the same there
 
 ```bash
 cd studio && npm install
+# or
+cd studio && yarn install
 ```
 
 Next, edit the sanity.js file found in the project root. Add your details to the client object in this file:
