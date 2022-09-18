@@ -61,6 +61,14 @@ Then switch to the 'studio' folder and initialize Sanity. This will prompt you t
 sanity init
 ```
 
+## Loading demo data
+
+To load in the boilerplate data you will need to do so via the CLI. In the 'studio' folder enter the command below. If your target dataset is not "production", change it to the name of your dataset. 
+
+```bash
+sanity dataset import boilerplate.ndjson production
+```
+
 ## Development and Testing
 
 Once the project is setup, you can run the NextJS development server in the project root:
